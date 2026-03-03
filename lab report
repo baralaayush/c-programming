@@ -1,0 +1,664 @@
+//wap to print "CSIT" along with double inverted comma
+#include<stdio.h>
+int main()
+{
+	printf("\"CSIT\"");
+}
+
+//wap to print to display following patterns
+#include<stdio.h>
+int main()
+{
+	printf("*****\n");
+	printf("*\n");
+	printf("*\n");
+	printf("****\n");
+	printf("*\n");
+	printf("*\n");
+	printf("*\n");
+				
+}
+//wap to declare variables of different data types, take input from user and print them
+#include<stdio.h>
+int main()
+{
+	int p;
+	float q;
+	char r;
+	double s;
+	printf("Enter numbers");
+	scanf("%d%f %c%lf",&p,&q,&r,&s);
+	printf("inputed value are:%d\n%f\n%c\n%lf",p,q,r,s);	
+	
+}
+//wap to display BSCCSIT into reverse order
+#include<stdio.h>
+int main()
+{
+	char a;
+	char b;
+	char c;
+	char d;
+	char e;
+	char f;
+	char g;
+	
+printf("Enter BSCCSIT:");
+scanf("%c %c %c %c %c %c %c",&a,&b,&c,&d,&e,&f,&g);
+printf("The reverse of BSCCSIT is:%c\n%c\n%c\n%c\n%c\n%c\n%c\n",g,f,e,d,c,b,a);
+return 0;	
+}
+//Wap to take two integer number and find their sum
+#include<stdio.h>
+int main()
+{
+	int a,b,sum;
+	printf("Enter first number");
+	scanf("%d",&a);
+	printf("Enter second number");
+	scanf("%d",&b);
+	sum=a+b;
+	printf("The sum of inputed number is %d",sum);
+	return 0;
+} 
+
+// wap to find the square root of number input by user
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a;
+	float b;
+	printf("Enter any integer number");
+	scanf("%d",&a);
+	b=sqrt(a);
+	printf("The square root of input number is %f",b);
+	return 0;
+} 
+
+//wap to input radius of circle and find its perimeter and area both.
+#include<stdio.h>
+#include<math.h>
+#define PIE 3.1415
+int main(){
+	float r,per,area;
+	printf("Enter radius of circle");
+	scanf("%f",&r);
+	per=2*PIE*r;
+	area=PIE*pow(r,2);
+	printf("Perimeter of circle is:%f",per);
+	printf("Area of circle is:%f",area);	
+	return 0;
+} 
+
+//wap to find roots of quadratic equation
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float a,b,c;
+	float root1,root2;
+	printf("Enter value of b");
+	scanf("%f",&b);
+	printf("Enter value of a");
+	scanf("%f",&a);
+	printf("Enter value of c");
+	scanf("%f",&c);
+	
+	root1= (-b+sqrt((pow(b,2)-(4*a*c))))/(2*a);
+	root2= (-b-sqrt((pow(b,2)-(4*a*c))))/(2*a);
+	printf("The value of root are %f%f",root1,root2);
+	return 0;
+} 
+
+//wap to input amount in paisa and convert it into rupees.
+#include<stdio.h>
+#include<math.h>
+int main(){
+	float paisa,rupees;
+	printf("Enter amount in paisa:\n");
+	scanf("%f",&paisa);
+	rupees=paisa/100;
+	printf("The entered amount in rupees is%f",rupees);
+	return 0;
+} 
+
+//wap to input temperature in celcius and display the value in fahrenheit.
+#include<stdio.h>
+int main()
+{
+	float c;
+	float f;
+	printf("Enter temperature in celcius");
+	scanf("%f",&c);
+	f=(18*c+320)/10;
+	printf("The temperature in fahrenheit is %f",f);
+	return 0;
+}
+
+//wap to input two number from user and find smallest number.
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("Enter any two number");
+	scanf("%d%d",&a,&b);
+	if(a<b)
+	printf("%d is a smaller",a);
+	else
+	printf("%d is a smaller",b);
+	return 0;
+} 
+
+//wap to check whether the input number is odd or even
+#include<stdio.h>
+int main()
+{
+int a;
+printf("Enter any number");
+scanf("%d",&a);
+if(a%2==0)
+printf("%d is a even number",a);
+else 
+printf("%d is a odd number",a);
+return 0;
+} 
+
+//wap to find greatest number among 3 number using if-else if ladder.
+#include<stdio.h>
+int main()
+{
+int a,b,c;
+printf("Enter any three number a,b,c\n");
+scanf("%d%d%d",&a,&b,&c);
+if(a>b && a>c)
+printf("%d is a greatest number",a);
+else if(b>a && b>c)
+printf("%d is a greatest number",b);
+else
+printf("%d is a greatest number",c);
+return 0; 		
+} 
+
+//wap to find greatest number among 3 number using nested if else.
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("Enter any three number a,b,c\n");
+	scanf("%d%d%d",&a,&b,&c);
+	if(a>b)
+		if(a>c)
+		printf("%d is a greatest number",a);
+		else
+		printf("%d is a greatest number",c);
+	else
+		if(b>c)
+		printf("%d is a greatest number",b);
+		else
+		printf("%d is a greatest number",c);
+	return 0;
+} 
+
+//wap to find greatest number among 3 number using ternary operator.
+#include<stdio.h>
+int main()
+{
+	int a,b,c,t;
+	printf("Enter any three number a,b,c\n");
+	scanf("%d%d%d",&a,&b,&c);
+	t=(a>b)?((a>c)? a:c) :((b>c)? b:c);
+	printf("%d is a greatest number",t);
+	return 0;
+	} 
+	
+//wap to find factorial of a number input by user.
+#include<stdio.h>
+int main()
+{
+	int f;
+	int i;
+	printf("Enter number to find factorial:\n");
+	scanf("%d",&f);
+	for(i=f-1; i>0; i--)
+	{
+		f=f*i;	
+	}
+	printf("The factorial is %d",f);
+} 
+
+//wap to find fibonacii series upto 10th term.
+#include<stdio.h>
+int main()
+{
+	int next;
+	int first=0;
+	int second=1;
+	next=first+second;
+	printf("%d,%d,",first,second);
+	for(int i=3; i<=10; i++)
+	{
+		printf("%d,",next);
+		first=second;
+		second=next;
+		next=first+second;
+	}
+	
+} 
+
+//wap to check the whether the input number is prime or composite.
+#include<stdio.h>
+int main()
+{
+	int n;
+	int count=0;
+	printf("Enter any number:");
+	scanf("%d",&n);
+	for(int i=1; i<=n; i++)
+	{
+		if(n%i==0)
+		{
+			count++;
+		}
+	}
+	if(count==2)
+	{
+	printf("%d is a prime number",n);}
+	else
+	{
+	printf("%d is a composite number",n);}
+	return 0;
+} 
+
+//wap to find prime number upto nth term enter by user.
+#include<stdio.h>
+int main()
+{
+	int n;
+	int count;
+	int i;
+	int j;
+	printf("Enter the nth term upto which prime number should be display:");
+	scanf("%d",&n);
+	for(i=1; i<=n; i++)
+	{
+		count=0;
+		for(j=1; j<=i; j++)
+		{
+			if(i%j==0)
+			{
+				count++;
+			}
+		}
+		if(count==2)
+		{
+			printf("%d,",i);
+		}
+	}
+	return 0;
+}
+//wap to display first 10 natural numbers.
+#include<stdio.h>
+int main()
+{
+	printf("The first 10 natural number are:\n");
+	for(int i=1; i<=10; i++)
+	{
+		printf("%d\n",i );
+		
+	}
+	return 0;
+} 
+
+//wap to display odd number upto nth term given by user.
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("Enter the nth term:");
+	scanf("%d",&n);
+	printf("The odd number upto %d th term are:\n",n);
+	for(int i=1; i<=n; i=i+2)
+	{
+		printf("%d\n",i);	
+	}
+	return 0;
+} 
+
+//wap to display even number upto nth term given by user.
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("Enter the nth term:");
+	scanf("%d",&n);
+	printf("The odd number upto %d th term are:\n",n);
+	for(int i=2; i<=n; i=i+2)
+	{
+		printf("%d\n",i);	
+	}
+	return 0;	
+} 
+
+//wap to display multiplication table of a number input by user.
+ #include<stdio.h>
+ int main()
+ {
+ 	int n,m;
+ 	printf("Enter the number for multiplication table:");
+	scanf("%d",&n);
+	printf("The multiplication table %d is:\n",n);
+	for(int i=1; i<=10; i++)
+	{
+		m=n*i;
+		printf("%d*%d=%d\n",n,i,m);
+	}
+	return 0;
+ } 
+//wap to find whether the number is armstrong number or not
+#include<stdio.h>
+int main()
+{
+int n,i, rem, sum = 0;
+printf("Enter 3 digit number: ");
+scanf("%d", &n);
+for( i = n; i > 0; i= i / 10)
+{
+        rem = i % 10;
+        sum = sum + rem * rem * rem;
+}
+if(sum == n)
+        printf("Armstrong number");
+    else
+        printf("Not Armstrong number");
+    return 0;
+}
+
+Nested Loop
+//wap to display following patterns using nested loop
+i)#####
+  #####
+  #####
+  ##### 
+  #include<stdio.h>
+  int main()
+  {
+  	int i,j;
+  	for(i=1;i<=4;i++)
+  	{
+  		for(j=1;j<=5;j++)
+		  {
+  			printf("#");
+		  }
+		  printf("\n");
+	  }
+	  return 0;
+  }
+  ii) *****
+      ****
+      ***
+      **
+      *
+  #include<stdio.h>
+  int main()
+  {
+  	int i,j;
+  	for(i=1; i<=5; i++)
+  	{
+  	for(j=5; j>=i; j--)
+  	{
+  		printf("*");
+	  }
+	  printf("\n");}
+return 0;
+  }
+  iii) *
+      **
+      ***
+      ****
+      *****
+
+  #include<stdio.h>
+  int main()
+  {
+  	int i,j;
+  	for(i=1; i<=5; i++)
+  	{
+  	for(j=1; j<=i; j++)
+  	{
+  		printf("*");
+	  }
+	  printf("\n");}
+return 0;
+  }
+  iv)1
+     22
+     333
+     4444
+     55555
+  #include<stdio.h>
+  int main()
+  {
+  	int i,j;
+  	for(i=1; i<=5; i++)
+  	{
+  	for(j=1; j<=i; j++)
+  	{
+  		printf("%d",i);
+	  }
+	  printf("\n");}
+return 0;
+  }
+  v) 1
+      12
+      123
+      1234
+      12345
+  #include<stdio.h>
+  int main()
+  {
+  	int i,j;
+  	for(i=1; i<=5; i++)
+  	{
+  	for(j=1; j<=i; j++)
+  	{
+  		printf("%d",j);
+	  }
+	  printf("\n");}
+return 0;
+  }
+  vi)1
+     23
+     456
+     78910
+  #include<stdio.h>
+ 
+  int main()
+  {
+  	int i,j,k=1;
+  	for(i=1; i<=4; i++)
+  	{
+  	for(j=1; j<=i; j++)
+  	{
+  		printf("%d",k++);
+	  }
+	  printf("\n");}
+return 0;
+  }
+vii) 1
+     01
+     101
+      0101
+      10101
+  #include<stdio.h>
+ int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            if((i + j) % 2 == 0)
+                printf("1");
+            else
+                printf("0");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+viii)  *
+      *   *
+   *   *    *
+ *   *    *   *
+#include<stdio.h>
+
+int main()
+{
+    int i, j, k;
+
+    for(i = 1; i <= 4; i++)
+    {
+        for(j = 1; j <= 4 - i; j++)
+        {
+            printf("  ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("*   ");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+ix)     1
+      2    2
+  3    3     3
+4   4   4    4
+#include<stdio.h>
+
+int main()
+{
+    int i, j, k;
+
+    for(i = 1; i <= 4; i++)
+    {
+        for(j = 1; j <= 4 - i; j++)
+        {
+            printf("  ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("%d   ", i);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+x)      1
+       2  3
+   4    5    6
+ 7   8    9   10
+  #include<stdio.h>
+
+int main()
+{
+    int i, j, k,n= 1;
+    for(i = 1; i <= 4; i++)
+    {
+        for(j = 1; j <= 4- i; j++)
+        {
+            printf("  ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("%d   ", n);
+            num++;
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+xi)         *
+           ***
+         *****
+       *******
+  
+  #include<stdio.h>
+
+int main()
+{
+    int i, j, k;
+
+    for(i = 1; i <= 7; i=i+2)
+    {
+        for(j = 1; j <= 7 - i; j++)
+        {  
+        
+            printf(" ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+  xii)      *
+           ***
+         *****
+       *******
+         *****
+           ***
+             *
+  #include<stdio.h>
+
+int main()
+{
+    int i, j, k;
+
+    for(i = 1; i <= 7; i=i+2)
+    {
+        for(j = 1; j <= 7 - i; j++)
+        {  
+        
+            printf(" ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+for(i = 5; i >=1 ; i=i-2)
+    {
+        for(j = 1; j <= 7 - i; j++)
+        {  
+        
+            printf(" ");
+        }
+        for(k = 1; k <= i; k++)
+        {
+            printf("* ");
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+
+		
+
+
