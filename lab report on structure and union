@@ -1,0 +1,471 @@
+//create a structure named "student" with members name,age,and total marks. and wap to input data of two input data of two students and display their information.
+#include<stdio.h>
+#include<string.h>
+struct student{
+	char name[50];
+	int age;
+	float mark;
+};
+int main()
+{
+	struct student a,b;
+	printf("Enter name of first student:");
+	fgets(a.name,50,stdin);
+	a.name[strlen(a.name)-1]='\0';
+	printf("Enter age:");
+	scanf("%d",&a.age);
+	printf("Enter total marks:");
+	scanf("%f",&a.mark);
+	
+	
+	 
+	printf("Enter name of first student:");
+	scanf(" %50[^\n]s",b.name);                                        
+	printf("Enter age:");
+	scanf("%d",&b.age);
+	printf("Enter total marks:");
+	scanf("%f",&b.mark);
+	
+	printf("The record of two student are:\n");
+	printf("%s\t%d\t%f\t",a.name,a.age,a.mark);
+	printf("\n");
+	printf("%s\t%d\t%f\t",b.name,b.age,b.mark);
+	return 0;
+	
+}
+
+//defined structure named circle with member radius. wap to calc area and perimeter of two circle and display result.
+#include<stdio.h>
+struct circle{
+	float radius;
+	}c[2];
+	
+int main()
+{
+	int i;
+	float area,per;
+	for(i=0; i<2; i++)
+	{
+	printf("Enter radius of circle:\n");
+	scanf("%f",&c[i].radius);
+	}
+	
+	for(i=0; i<2; i++)
+	{
+		area=3.1415*c[i].radius*c[i].radius;
+		per=2*3.1415*c[i].radius;	
+		printf("The area and perimeter of %dst circle is:",i);
+		printf("%f,%f",area,per);
+		printf("\n");
+	}
+	return 0;
+}
+
+
+//wap using structure that reads record of 5 student with members roll,name,address and marks.and display the record of student who have obtained greater than 250 marks.
+
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+	char name[50];
+	char address[50];
+	int roll;
+	float mark;
+}s[2];
+
+int main()
+{	
+	int i;
+	for(i=0; i<2; i++)
+	{
+	printf("Enter name of student:");
+	scanf(" %50[^\n]s",s[i].name);
+	
+	printf("Enter address:");
+	scanf(" %50[^\n]s",s[i].address);
+	
+	printf("Enter roll number:");
+	scanf("%d",&s[i].roll);	
+	
+	printf("Enter mark:");
+	scanf("%f",&s[i].mark);
+	
+	printf("\n");
+	}
+	
+	printf("The output of students are:\n");
+	printf("Name\t Address\t Roll\t Mark\n");
+	for(i=0; i<2; i++)
+	{
+		if(s[i].mark>250)
+	printf("%s\t%s\t%d\t%f\t\n",s[i].name,s[i].address,s[i].roll,s[i].mark);
+	}
+	return 0;
+}
+
+
+
+//create a structure named book with members book_name, price and author-name then take input for 10 records of book and then print the name of author having the price of book greater than 1000.
+#include<stdio.h>
+#include<string.h>
+struct book{
+	char book_name[50];
+	char author_name[50];
+	int price;	
+}b[2];
+
+int main()
+{
+	int i;
+	for(i=0; i<2; i++)
+	{
+		printf("Enter name of book:");
+		scanf(" %50[^\n]s",b[i].book_name);
+		printf("Enter author name:");
+		scanf(" %50[^\n]s",b[i].author_name);
+		printf("Enter price:");
+		scanf("%d",&b[i].price);
+		printf("\n");
+		
+	}
+	
+	printf("The author of book are:\n");
+	for(i=0; i<2; i++)
+	{
+		if(b[i].price>1000)
+		{
+			printf("%s",b[i].author_name);
+		}
+	}
+	return 0;
+}
+
+//create a union named person with members name,age and salary. input data of 2 personand display their information
+#include<stdio.h>
+#include<string.h>
+union person{
+	char name[50];
+	int age;
+	int salary;
+	
+}p[2];
+ int main()
+ {
+ 	int i;
+ 	for(i=0; i<2; i++)
+ 	{
+ 		printf("Enter name of person:");
+ 		scanf(" %50[^\n]s",p[i].name);
+ 		printf("The entered name is %s\n",p[i].name);
+ 		
+ 		printf("Enter age:");
+ 		scanf("%d",&p[i].age);
+ 		printf("The entered age is %d\n",p[i].age);
+ 		
+ 		printf("Enter salary:");
+ 		scanf("%d",&p[i].salary);
+ 		printf("The entered salary is %d\n",p[i].salary);
+ 		printf("\n");
+	 }
+	 return 0;
+ }
+
+//create a structure named time with members hr,min,sec. input two times and display the sum
+#include<stdio.h>
+struct time{
+	int hr;
+	int min;
+	int sec;
+}t[2];
+
+int main()
+{
+	int i,sum=0;
+	for(i=0; i<2; i++)
+	{
+		printf("Enter hour:");
+		scanf("%d",&t[i].hr);
+		
+		printf("Enter min:");
+		scanf("%d",&t[i].min);
+		
+		printf("Enter sec:");
+		scanf("%d",&t[i].sec);
+		
+		sum=sum+t[i].hr+t[i].min+t[i].sec;
+		
+		printf("\n");
+	}
+	printf("The output of all time sum is:%d",sum);
+}
+
+//create a structure named "student" with members name,age,and total marks. and wap to input data of two input data of two students and display their information.
+#include<stdio.h>
+#include<string.h>
+struct student{
+	char name[50];
+	int age;
+	float mark;
+};
+int main()
+{
+	struct student a,b;
+	printf("Enter name of first student:");
+	fgets(a.name,50,stdin);
+	a.name[strlen(a.name)-1]='\0';
+	printf("Enter age:");
+	scanf("%d",&a.age);
+	printf("Enter total marks:");
+	scanf("%f",&a.mark);
+	
+	
+	 
+	printf("Enter name of first student:");
+	scanf(" %50[^\n]s",b.name);                                        
+	printf("Enter age:");
+	scanf("%d",&b.age);
+	printf("Enter total marks:");
+	scanf("%f",&b.mark);
+	
+	printf("The record of two student are:\n");
+	printf("%s\t%d\t%f\t",a.name,a.age,a.mark);
+	printf("\n");
+	printf("%s\t%d\t%f\t",b.name,b.age,b.mark);
+	return 0;
+	
+}
+
+//defined structure named circle with member radius. wap to calc area and perimeter of two circle and display result.
+#include<stdio.h>
+struct circle{
+	float radius;
+	}c[2];
+	
+int main()
+{
+	int i;
+	float area,per;
+	for(i=0; i<2; i++)
+	{
+	printf("Enter radius of circle:\n");
+	scanf("%f",&c[i].radius);
+	}
+	
+	for(i=0; i<2; i++)
+	{
+		area=3.1415*c[i].radius*c[i].radius;
+		per=2*3.1415*c[i].radius;	
+		printf("The area and perimeter of %dst circle is:",i);
+		printf("%f,%f",area,per);
+		printf("\n");
+	}
+	return 0;
+}
+
+
+//wap using structure that reads record of 5 student with members roll,name,address and marks. Now, display the record of student who have obtained greater than 250 marks.
+
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+	char name[50];
+	char address[50];
+	int roll;
+	float mark;
+}s[2];
+
+int main()
+{	
+	int i;
+	for(i=0; i<2; i++)
+	{
+	printf("Enter name of student:");
+	scanf(" %50[^\n]s",s[i].name);
+	
+	printf("Enter address:");
+	scanf(" %50[^\n]s",s[i].address);
+	
+	printf("Enter roll number:");
+	scanf("%d",&s[i].roll);	
+	
+	printf("Enter mark:");
+	scanf("%f",&s[i].mark);
+	
+	printf("\n");
+	}
+	
+	printf("The output of students are:\n");
+	printf("Name\t Address\t Roll\t Mark\n");
+	for(i=0; i<2; i++)
+	{
+		if(s[i].mark>250)
+	printf("%s\t%s\t%d\t%f\t\n",s[i].name,s[i].address,s[i].roll,s[i].mark);
+	}
+	return 0;
+}
+
+
+
+//create a structure named book with members book_name, price and author-name then take input for 10 records of book and then print the name of author having the price of book greater than 1000.
+#include<stdio.h>
+#include<string.h>
+struct book{
+	char book_name[50];
+	char author_name[50];
+	int price;	
+}b[2];
+
+int main()
+{
+	int i;
+	for(i=0; i<2; i++)
+	{
+		printf("Enter name of book:");
+		scanf(" %50[^\n]s",b[i].book_name);
+		printf("Enter author name:");
+		scanf(" %50[^\n]s",b[i].author_name);
+		printf("Enter price:");
+		scanf("%d",&b[i].price);
+		printf("\n");
+		
+	}
+	
+	printf("The author of book are:\n");
+	for(i=0; i<2; i++)
+	{
+		if(b[i].price>1000)
+		{
+			printf("%s\n",b[i].author_name);
+		}
+	}
+	return 0;
+}
+
+
+//create a structure "Employee" having name,address,salary and age as member and take input from user for 5 record and then display name of employee having age between 40 & 50. 
+#include<stdio.h>
+#include<string.h>
+struct Employee{
+	char name[50];
+	char address[50];
+	float salary;
+	int age;
+}E[5];
+
+int main()
+{
+	int i;
+	for(i=0; i<5; i++)
+	{
+		printf("Enter name of employee:");
+		scanf(" %50[^\n]s",E[i].name);
+		printf("Enter address:");
+		scanf(" %50[^\n]s",E[i].address);
+		printf("Enter salary:");
+		scanf("%f",&E[i].salary);
+		printf("Enter age:");
+		scanf("%d",&E[i].age);
+		printf("\n");
+	}
+	
+	printf("The name of employee are:\n");
+	for(i=0; i<5; i++)
+	{
+		if(E[i].age>40 && E[i].age<50)
+		printf("%s\n",E[i].name);
+	}
+	return 0;
+}
+
+
+//create a union named person with members name,age and salary. input data of 2 person and display their information
+#include<stdio.h>
+#include<string.h>
+union person{
+	char name[50];
+	int age;
+	int salary;
+	
+}p[2];
+ int main()
+ {
+ 	int i;
+ 	for(i=0; i<2; i++)
+ 	{
+ 		printf("Enter name of person:");
+ 		scanf(" %50[^\n]s",p[i].name);
+ 		printf("The entered name is %s\n",p[i].name);
+ 		
+ 		printf("Enter age:");
+ 		scanf("%d",&p[i].age);
+ 		printf("The entered age is %d\n",p[i].age);
+ 		
+ 		printf("Enter salary:");
+ 		scanf("%d",&p[i].salary);
+ 		printf("The entered salary is %d\n",p[i].salary);
+ 		printf("\n");
+	 }
+	 return 0;
+ }
+ 
+
+ 
+//create a structure named time with members hr,min,sec. input two times and display the sum
+#include<stdio.h>
+struct time{
+	int hr;
+	int min;
+	int sec;
+}t[2];
+
+int main()
+{
+	int i,sum=0;
+	for(i=0; i<2; i++)
+	{
+		printf("Enter hour:");
+		scanf("%d",&t[i].hr);
+		
+		printf("Enter min:");
+		scanf("%d",&t[i].min);
+		
+		printf("Enter sec:");
+		scanf("%d",&t[i].sec);
+		
+		sum=sum+t[i].hr+t[i].min+t[i].sec;
+		
+		printf("\n");
+	}
+	printf("The output of all time sum is:%d",sum);
+}
+
+//wap to find sum of two complex number input by user using structure.
+#include<stdio.h>
+struct complex{
+	int real;
+	int img;
+}a,b;
+
+int main()
+{	
+	int sum_real,sum_img;
+	printf("Enter first complex number real part:");
+	scanf("%d",&a.real);
+	
+	printf("Enter first complex number imaginary part:");
+	scanf("%d",&a.img);
+	
+	printf("Enter second complex number real part:");
+	scanf("%d",&b.real);
+	
+	printf("Enter second complex number imaginary part:");
+	scanf("%d",&b.img);
+	
+	sum_real=a.real+b.real;
+	sum_img=a.img+b.img;
+	
+	printf("The sum of complex number is: %d+%di",sum_real,sum_img);
+	
+}
