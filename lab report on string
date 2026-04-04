@@ -1,0 +1,200 @@
+//wap to input a string and print it.
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+	char a[100];
+	printf("Enter the string:");
+	fgets(a,100,stdin);
+	a[strlen(a)-1]='\0';
+	printf("The inputed string is:%s\n",a);
+	return 0;
+}
+
+
+//wap to find length of a string without using string handling function.
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	int i,length;
+	while(a[i]!='\0')
+	{
+		if(a[i]=='\n')
+		{
+			a[i]='\0';
+			break;
+		}
+		i++;
+	}
+	length=strlen(a);
+	printf("The inputed string is:%d\n",length);
+	return 0;
+}
+
+
+//wap to find length of a string using string handling function.
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	int i,length;
+	a[strlen(a)-1]='\0';
+	length=strlen(a);
+	printf("The inputed string is:%d\n",length);
+	return 0;
+}
+
+//wap to finding no of alphabet in a string without using string handling function.
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	while(a[i]!='\0')
+	{
+		if(a[i]=='\n')
+		{
+			a[i]='\0';
+			break;
+		}
+		i++;
+	}
+	int i=0,count=0;
+	while(a[i]!='\0')
+	{
+		
+		if(a[i]!=' ' && a[i]!='\t')
+		{
+			count=count+1;
+		}
+		i++;
+	}
+	printf("The length of inputed string is:%d",count);
+	return 0;
+}
+
+//wap to count vowel in string
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	a[strlen(a)-1]='\0';
+	int i=0,count=0;
+	strupr(a);
+	while(a[i]!='\0')
+	{
+		
+		if(a[i]=='A' || a[i]=='E' || a[i]=='I' || a[i]=='O' || a[i]=='U' )
+		{
+			count=count+1;
+		}
+		i++;
+	}
+	printf("The length of inputed string is:%d",count);
+	return 0;
+}
+
+//wap to copy string to another
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50],b[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	a[strlen(a)-1]='\0';
+	strcpy(b,a);
+	printf("The copy of inputed string is:%s",b);
+	return 0;
+}
+
+//wap to concatenate two string
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+
+	char a[50],b[50];
+	printf("Enter the string:");
+	fgets(a,50,stdin);
+	printf("Enter the string:");
+	fgets(b,50,stdin);
+	a[strlen(a)-1]='\0';
+	b[strlen(b)-1]='\0';
+	strcat(a,b);
+	printf("The copy of inputed string is:%s",a);
+	return 0;
+}
+
+
+//wap to check whether two string are equal or not
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+    char str1[50], str2[50];
+    printf("Enter the first string:");
+    fgets(str1,50,stdin);
+    printf("Enter the second string:");
+    fgets(str2,50,stdin);
+    if (strcmp(str1, str2) == 0) 
+    printf("The strings are equal");
+    else 
+    printf("The strings are not equal");
+    return 0;
+}
+
+
+//wap to convert lowercase to upercase and viceversa
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+	char a[50];
+	char b[50];
+	printf("Enter string in lowercase:");
+	scanf("%50[^\n]s",a);
+	printf("Enter string in uppercase:");
+	scanf(" %50[^\n]s",b);
+	
+	strupr(a);
+	strlwr(b);
+	printf("The lower case entered text into uppercase is: %s\n",a);
+	printf("The upper case entered text into lowercase is: %s",b);
+	return 0;	
+}
+
+//wap to check palindrone string or not
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+	char a[50];
+	char b[50];
+	printf("Enter any sting for check:");
+	scanf("%50[^\n]s",a);
+	strcpy(b,a);
+	strrev(a);
+	if(strcmp(a,b)==0)
+	printf("It is palindrone string");
+	else
+	printf("It is not palindrone string");
+	return 0;	
+}
