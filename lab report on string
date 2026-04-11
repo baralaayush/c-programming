@@ -85,7 +85,7 @@ int main()
 	return 0;
 }
 
-//wap to count vowel in string
+//wap to count vowel in string.
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -110,7 +110,7 @@ int main()
 	return 0;
 }
 
-//wap to copy string to another
+//wap to copy string to another.
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -144,7 +144,7 @@ int main()
 }
 
 
-//wap to check whether two string are equal or not
+//wap to check whether two string are equal or not.
 #include <stdio.h>
 #include <string.h>
 int main() 
@@ -162,7 +162,7 @@ int main()
 }
 
 
-//wap to convert lowercase to upercase and viceversa
+//wap to convert lowercase to upercase and viceversa for a separate two string.
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -181,7 +181,32 @@ int main()
 	return 0;	
 }
 
-//wap to check palindrone string or not
+//wap to convert lowercase to upercase and viceversa for a single string.
+#include<stdio.h>
+#include<string.h>
+int main()
+{	
+	char a[50];
+	int i;
+	printf("Enter string in any case:"); //Aa
+	scanf("%50[^\n]s",a);
+	while(a[i]!='\0')
+	{
+		if(a[i]>='a' && a[i]<='z')
+		{
+			a[i]=a[i]-32;
+		}
+		else if(a[i]>='A' && a[i]<='Z')
+		{
+			a[i]=a[i]+32;
+		}
+		i++;
+	}
+	printf("The converted string is: %s",a);
+	return 0;	
+}
+
+//wap to check palindrone string or not.
 #include<stdio.h>
 #include<string.h>
 int main()
