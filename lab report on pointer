@@ -217,4 +217,125 @@ return 0;
 	printf("The value of pointer z=%d\n",***z); 	
 	return 0; 
  }
- 
+ //wap to input 2d array element and print them using pointer.
+#include<stdio.h>
+int main()
+{
+	int row,col;
+	int i,j;
+ 	printf("Enter size of array in row and column:");
+ 	scanf("%d%d",&row,&col);
+ 	int a[row][col];
+	printf("Enter element for an array:");
+	for(i=0; i<row; i++)
+	{
+		for(j=0; j<col; j++)
+		{
+		
+	scanf("%d",*(a+i)+j);
+}
+}
+
+printf("The inputed element are:\n");
+	for(i=0; i<row; i++)
+	{
+	for(j=0; j<col; j++)
+		{
+		
+	printf("%d\t",**(a+i)+j);
+}
+printf("\n");
+}
+return 0;	
+ } 
+
+
+//wap to find maximum element of each row and column of 2d array with use of pointer.
+ #include<stdio.h>
+ int main()
+ {
+ 	int row,col;
+	int i,j;
+ 	printf("Enter size of array in row and column:");
+ 	scanf("%d%d",&row,&col);
+ 	int a[row][col];
+	printf("Enter element for an array:");
+	
+	for(i=0; i<row; i++)
+	{
+		for(j=0; j<col; j++)
+		{
+		scanf("%d",*(a+i)+j);
+		}
+	}
+	
+	int max,k=0;
+	for(i=0; i<row; i++)
+	{	
+		max=a[i][0];
+		for(j=0; j<col; j++)
+		{	
+			
+			if(a[i][j]>max)
+			{
+				max=a[i][j];
+			}
+		
+		}
+	printf("The maximum element of %d row is:%d\n",i,max);
+	}
+
+	for(j=0; j<col; j++)
+	{	
+			max=a[0][j];
+			for(i=0; i<row; i++)
+			{	
+				
+				if(a[i][j]>max)
+				{
+					max=a[i][j];
+				}
+			
+			}
+	printf("The maximum element of %d column is:%d\n",j,max);
+	}
+	return 0;
+}
+
+
+//wap to demostrate use of array of pointer
+#include<stdio.h>
+int main()
+{
+	int a=1,b=2,c=3,d=4;
+	int *p[4];
+	p[0]=&a;
+	p[1]=&b;
+	p[2]=&c;
+	p[3]=&d;
+	int i;
+	printf("The element of an array are:\n");
+	for(i=0; i<4; i++)
+	{
+		
+			printf("%d,",*p[i]);
+	}
+	return 0;
+}
+
+//wap to demostrate use of array of pointer
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char *p[]={"ram","shyam","aayush","baral","rita"};
+	int n=sizeof(p);
+	int i;
+	printf("The element of an array are:\n");
+	for(i=0; i<n; i++)
+	{
+		
+			printf("%s,",p[i]);
+	}
+	return 0;
+}
