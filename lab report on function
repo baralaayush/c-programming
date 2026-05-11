@@ -70,7 +70,7 @@ int prime(int a)
 }
 
 
-/wap to find factorial of number using recursion function.
+//wap to find factorial of number using recursion function.
 #include<stdio.h>
 int fact(int);
 int main()
