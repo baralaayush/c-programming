@@ -21,7 +21,7 @@ int main()
 	char a[50];
 	printf("Enter the string:");
 	fgets(a,50,stdin);
-	int i,length;
+	int i=0,length;
 	while(a[i]!='\0')
 	{
 		if(a[i]=='\n')
@@ -60,6 +60,7 @@ int main()
 {	
 
 	char a[50];
+	int i=0;
 	printf("Enter the string:");
 	fgets(a,50,stdin);
 	while(a[i]!='\0')
@@ -187,7 +188,7 @@ int main()
 int main()
 {	
 	char a[50];
-	int i;
+	int i=0;
 	printf("Enter string in any case:"); //Aa
 	scanf("%50[^\n]s",a);
 	while(a[i]!='\0')
