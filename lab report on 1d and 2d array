@@ -492,14 +492,20 @@ int main()
 #include<stdio.h>
 int main()
 {
-	int i,j,k,l,row1,col1,row2,col2;
+	int row1,col1,row2,col2;
 	printf("Enter the row and column size for first matrix:\n");
 	scanf("%d%d",&row1,&col1);
 	printf("Enter the row and column size for second matrix:\n");
 	scanf("%d%d",&row2,&col2);
+	if(col1!=row2)
+	{
+	    printf("The column of first matrix and rows of second matirx should be equal for multiplication");
+	    return 0;
+	}
 	int mat1[row1][col1];
 	int mat2[row2][col2];
 	int mul[row1][col2];
+	int i,j,k;
 	//element for first matrix
 	printf("Enter an element for first matrix:\n");
 	for(i=0; i<row1; i++)
@@ -510,17 +516,16 @@ int main()
 		}
 	}
 	//element for second matrix
-		printf("Enter an element for second matrix:\n");
-	for(i=0; i<row1; i++)
+	printf("Enter an element for second matrix:\n");
+	for(i=0; i<row2; i++)
 	{
-		for(j=0; j<col1; j++)
+		for(j=0; j<col2; j++)
 		{
 			scanf("%d",&mat2[i][j]);
 		}
 	}
 	
-	if(col1==row2)
-	{ 
+	 
 		for(i=0; i<row1; i++)
 		{
 			for(j=0; j<col2; j++)
@@ -533,13 +538,8 @@ int main()
 			
 			}
 			}	
-	}
-	else
-	{
-		printf("For matrix multiplication the column of first matrix must be equal to the row of second matrix.\n");
-	}
 	
-	//print
+	//print resulted matrix
 	printf("The result is:\n");
 	for(i=0; i<row1; i++)
 		{
