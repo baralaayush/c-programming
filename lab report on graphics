@@ -1,0 +1,51 @@
+//Write a c-program to initialize graphics
+#include<graphics.h>
+int main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm, NULL);
+getch();
+//require to hold screen
+closegraph();
+//necessary
+return 0;
+}
+
+//Write a c-program to draw following using graphics: 
+//i) line (color should be red), 
+//ii) circle at (100, 100) and radius 50 (Yellow color), 
+//iii) rectangle (Blue color), iv) polygon (White color).
+
+#include<graphics.h>
+int main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,NULL);
+setcolor(RED);
+line(50,200,200,200);
+setcolor(YELLOW);
+circle(100,100,50);
+setcolor(BLUE);
+rectangle(50,300,300,400);
+setcolor(WHITE);
+int points[] = {400, 200, 500, 150, 600, 200, 550, 300, 450, 300, 400, 200};
+drawpoly(6, points);
+getch();
+closegraph();
+return 0;
+}
+
+//Write a c-program to print following using graphics: i) Good Morning at (350, 150), ii) HELLO with red color and Green background color
+#include<graphics.h>
+int main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,NULL);
+outtextxy(350,150, "Good Morning");
+setcolor(RED);
+setbkcolor(GREEN);
+outtextxy(350,200,"HELLO");
+getch();
+closegraph();
+return 0;
+}
