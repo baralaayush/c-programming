@@ -1,0 +1,120 @@
+//Write a c-program to read name, age and GPA of student from user and store it into file name student.txt
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int age;
+char name[50];
+float GPA;
+FILE *p;
+p= fopen("student.txt","w"); //for opening file
+int i,n;
+printf("Enter no.of student");
+scanf("%d",&n);
+printf("Enter Details:\n");
+for( i=0; i<n; i++)
+{
+printf("Enter name:");
+scanf("%50[^\n]s",name);
+printf("Enter age:");
+scanf("%d",&age);
+printf("Enter GPA:");
+scanf("%f", &GPA);
+fprintf(p,"Name is %s Age is %d GPA is %f,",name, age, GPA);
+}
+printf("Wrote successfully");
+fclose(p);
+return 0;
+}
+
+//Write a c-program to read that created file above studemt.txt
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int age;
+char name[50];
+float GPA;
+FILE *p;
+p=fopen("student.txt","r");
+if(p==NULL)
+{
+printf("File not found");
+exit(1);
+}
+printf("The details are:\n"); //for opening file
+while(fscanf(p,"Name is %s Age is %d GPA is %f,",name, &age, &GPA)==2)
+{
+printf("Name is %s Age is %d GPA is %f\n",name,age,GPA);
+}
+fclose(p);
+return 0;
+}
+
+//Write a c-program to read name, id and salary of 3 employee from user and store it into file name emp.txt
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int id;
+char name[50];
+float salary;
+FILE *p;
+p= fopen("emp.txt","w");
+printf("Enter Details:\n");
+int i;
+for( i=0; i<3; i++)
+ {
+printf("Enter name:");
+scanf("%s",name);
+printf("Enter id:");
+scanf("%d",&id);
+printf("Enter salary:");
+scanf("%f", &salary);
+fprintf(p,"Name:%s ID:%d Salary:%f,",name,id,salary);
+}
+fclose(p);
+p=fopen("emp.txt","r");
+//for checking file is found or not
+if(p==NULL)
+{
+printf("File is not created");
+}
+exit(1);
+while(fscanf(p,"Name:%s ID:%d Salary:%f,",name,&id, &salary)!=EOF)
+printf("Name:%s ID:%d Salary:%f\n",name,id,salary);
+{
+}
+fclose(p);
+return 0;
+}
+
+//Write a c program that reads integer data from file 'input.txt' and write even number from the data to 'output.txt' file.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+FILE *p, *q;
+int num;
+p= fopen("input.txt", "r"); // Open input file for reading
+if (p== NULL) {
+}
+printf("File not found\n");
+exit(1); // Exit if input file doesn't exist
+q= fopen("output.txt", "w"); // Open or create automatically output file for writing
+if ( q== NULL) {
+}
+printf("Error opening output file\n");
+fclose(p);
+exit(1);
+// Read integers one by one until end of file
+while (fscanf(p, "%d", &num) != EOF) {
+// Check if number is even
+if (num% 2==0) {
+}
+}
+fprintf(q, "%d ", num);
+printf("Even numbers have been successfully written to output.txt from file input.txt\n");
+fclose(p);
+fclose(q);
+return 0;
+}
