@@ -469,3 +469,37 @@ int main()
 	printf("The sum of complex number is: %d+%di",sum_real,sum_img);
 	
 }
+
+//Create a structure named student with members name, id and GPA. Input record of 3 students and display the information using pointer variable.
+#include<stdio.h>
+struct student{
+}s[3];
+char name[50];
+int id;
+float gpa;
+int main()
+{
+struct student *p[3];
+p[0]=&s[0];
+p[1]=&s[1];
+p[2]=&s[2];
+int i;
+for(i=0; i<3; i++)
+ {
+}
+printf("Enter member name:");
+scanf("%50[^\n]s",p[i]->name);
+printf("Enter member id:");
+scanf("%d",&p[i]->id);
+printf("Enter member GPA:");
+scanf("%f",&(*p[i]).gpa);
+printf("\n");
+printf("The outputs are:\n")
+;
+printf("NAME\ID\tGPA\n");
+for( i=0; i<3; i++)
+{
+printf("%s\t%d\t%f\n",(*p[i]).name,(*p[i]).id,(*p[i]).gpa);
+}
+return 0;
+}
