@@ -1,1 +1,56 @@
+//Write a c-program to demonstrate DMA using i.malloc ii.calloc iii.realloc iv.free
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int i, *p,*q;
+p=(int *)malloc(4);
+q=(int *)calloc(5,4);
+printf("For malloc part:\n");
+printf("Enter amount:");
+scanf("%d",p);
+printf("The enter amount is: %d\n",*p);
+printf("\nFor calloc part:\n");
+printf("Enter element of array:");
+for( i=0; i<5; i++)
+{
+}
+scanf("%d",q+i);
+printf("The enter amount is:\n");
+for( i=0; i<5; i++)
+{
+}
+printf("%d,",*(q+i));
+printf("\n\nFor realloc part:\n");
+printf("The address before realloc:%d\n",p);
+p=(int *)realloc(p,100);
+printf("The address after realloc is:%d\n",p);
+free(p);
+free(q);
+return 0;
+}
+
+//Write a c-program to find largest element using DMA.
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int i,max, *p;
+p=(int *)calloc(5,sizeof(int));
+printf("Enter an element for an array:\n");
+for( i=0; i<5; i++)
+{
+scanf("%d",p+i);
+}
+max =*p;
+for( i=0; i<5; i++)
+{
+if(max<*(p+i))
+{
+max=*(p+i);
+}
+}
+printf("The largest element is %d", max);
+ return 0;
+}
 
