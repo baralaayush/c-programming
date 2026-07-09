@@ -503,3 +503,115 @@ printf("%s\t%d\t%f\n",(*p[i]).name,(*p[i]).id,(*p[i]).gpa);
 }
 return 0;
 }
+
+
+//passing structure to function
+#include<stdio.h>
+#include<string.h>
+struct student{
+	int id;
+	char name[50];
+	float mark;
+};
+void check(struct student s[], int, float);
+int main()
+{
+	int n;
+	printf("Enter no of student:");
+	scanf("%d",&n);
+	
+	struct student s[n];
+	int i;
+	
+	for(i=0; i<n; i++)
+	{
+		printf("Enter student id:");
+		scanf("%d",&s[i].id);
+		printf("Enter name:");
+		scanf(" %50[^\n]s",s[i].name);
+		printf("Enter total mark:");
+		scanf("%f",&s[i].mark);
+		printf("\n");
+	}
+	float avg=0;
+	for(i=0; i<n; i++)
+	{
+		avg=avg+s[i].mark;
+	}
+	avg=avg/n;
+	printf("The average is=%f",avg);
+	check(s,n,avg);
+	return 0;
+	
+}
+void check(struct student s[], int n, float avg)
+{
+	
+	int i;
+	printf("The output are:\n");
+	printf("Id\t Name\t Mark\n");
+	for(i=0; i<n; i++)
+	{
+		if(s[i].mark>avg)
+		{
+			printf("%d\t %s\t %f\n",s[i].id,s[i].name,s[i].mark);
+		}
+	}
+}
+
+
+#include<stdio.h>
+#include<string.h>
+int matrix(int row,int col,int mat[row][col]);
+int main()
+{
+	int row,col;
+	printf("Enter row and column of matrix:");
+	scanf("%d%d",&row,&col);
+	int mat[row][col];
+	int i,j;
+	printf("Enter matrix element:");
+	for(i=0; i<row; i++)
+	{
+		for(j=0; j<col; j++)
+		{
+		scanf("%d",&mat[i][j]);	
+		}
+	}
+	
+	matrix(row,col,mat);
+	return 0;
+}
+
+int matrix(int row,int col,int mat[row][col])
+{
+	int i,j,k,l,temp;
+	for(i=0; i<row; i++)
+	{
+		for(j=0; j<col; j++)
+		{
+			for(k=0; k<row; k++)
+			{
+				for(l=0; l<col; l++)
+				{
+					if(mat[i][j]<mat[k][l])
+					{
+						temp=mat[i][j];
+						mat[i][j]=mat[k][l];
+						mat[k][l]=temp;
+					}
+				}
+			}
+		}
+	}
+	
+	for(i=0; i<row; i++)
+	{
+		for(j=0; j<col; j++)
+		{
+		printf("%d\t",mat[i][j]);	
+		}
+		printf("\n");
+	}
+	
+}
