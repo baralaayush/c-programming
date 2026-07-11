@@ -122,23 +122,23 @@ int main()
  	printf("Enter size of array:");
  	scanf("%d",&size);
  	int i,a[size];
+ 	int *ptr=a;
 	printf("Enter element for an array:");
 	for(i=0; i<size; i++)
 	{
-	scanf("%d",(a+i));
+	scanf("%d",(ptr+i));
 }
 
 printf("The inputed element are:");
 	for(i=0; i<size; i++)
 	{
-	printf("%d,",*(a+i));
+	printf("%d,",*(ptr+i));
 }
 return 0;	
  } 
-
  
  
- //wap to find minimum element of array using pointer.
+ //wap to find minimum element of array using array as pointer.
  #include<stdio.h>
  int main()
  {
