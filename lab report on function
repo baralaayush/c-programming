@@ -354,6 +354,34 @@ void array(int a[], int size)
 	
 }
 
+//wap to input element of array and display it using function using pointer method to pass array
+#include<stdio.h>
+void array(int *a,int size);
+int main()
+{
+	int size,i;
+	printf("Enter size of array:");
+	scanf("%d",&size);
+	int a[size];
+	printf("Enter an element:");
+	for(i=0; i<size; i++)
+	{
+		scanf("%d",&a[i]);
+		}
+	array(a,size);
+	return 0;	
+}
+void array(int *a, int size)
+{	
+	int i;
+	printf("The element of array are:");
+	for(i=0; i<size; i++)
+	{
+		printf("%d,",*(a+i));
+	}
+	
+}
+
 //wap to find maximum element of 1d array using function
 #include<stdio.h>
 int maximum(int a[],int size);
